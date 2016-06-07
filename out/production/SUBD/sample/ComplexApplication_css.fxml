@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="720.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <MenuBar VBox.vgrow="SOMETIMES">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane focusTraversable="true" prefHeight="600.0" prefWidth="1280.0" VBox.vgrow="ALWAYS">
+      <items>
+            <AnchorPane prefHeight="648.0" prefWidth="1224.0">
+               <children>
+                  <TabPane fx:id="dddd" prefHeight="648.0" prefWidth="1020.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="HidePerf" text="Переговоры">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="615.0">
+                                 <children>
+                                    <TableView fx:id="table" prefHeight="814.0" prefWidth="1020.0">
+                                      <columns>
+                                        <TableColumn fx:id="tabId" prefWidth="30.0" text="№" />
+                                        <TableColumn fx:id="tabname" prefWidth="150.0" text="Код переговоров" />
+                                        <TableColumn fx:id="tabY" prefWidth="112.0" text="Код абонента" />
+                                        <TableColumn fx:id="tabBu" prefWidth="98.0" text="Код города" />
+                                        <TableColumn fx:id="tabBe" minWidth="0.0" prefWidth="72.0" text="Дата" />
+                                        <TableColumn fx:id="tabEn" minWidth="3.0" prefWidth="95.0" text="Конец" />
+                                        <TableColumn fx:id="tabG" minWidth="0.0" prefWidth="125.0" text="Кол минут" />
+                                        <TableColumn fx:id="tabI" minWidth="0.0" prefWidth="82.0" text="Сутки" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="HideActors" text="Актеры">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="765.0">
+                                 <children>
+                                    <TableView fx:id="tableAc" prefHeight="778.0" prefWidth="1020.0">
+                                       <columns>
+                                          <TableColumn fx:id="tabAcId" prefWidth="30.0" text="№" />
+                                          <TableColumn fx:id="tabAcFio" prefWidth="150.0" text="ФИО" />
+                                          <TableColumn fx:id="tabAcY" prefWidth="70.0" text="Возраст" />
+                                          <TableColumn fx:id="tabAcEx" prefWidth="60.0" text="Опыт" />
+                                          <TableColumn fx:id="tabAcCo" prefWidth="85.0" text="Стоимость" />
+                                          <TableColumn fx:id="tabAcRa" prefWidth="50.0" text="Ранг" />
+                                          <TableColumn fx:id="tabAcGe" prefWidth="75.0" text="Жанр" />
+                                          <TableColumn fx:id="tabAcAd" prefWidth="75.0" text="Адрес" />
+                                          <TableColumn fx:id="tabAcUs" prefWidth="95.0" text="Пользователь" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="HideUsers" text="Пользователи">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="786.0" prefWidth="887.0">
+                                 <children>
+                                    <TableView fx:id="tableUs" prefHeight="786.0" prefWidth="1020.0">
+                                       <columns>
+                                          <TableColumn fx:id="tabUsId" prefWidth="30.0" text="№" />
+                                          <TableColumn fx:id="tabUsLog" prefWidth="100.0" text="Логин" />
+                                          <TableColumn fx:id="tabUsPa" prefWidth="75.0" text="Пароль" />
+                                          <TableColumn fx:id="tabUsTh" prefWidth="75.0" text="Театр" />
+                                          <TableColumn fx:id="tabUsRo" prefWidth="75.0" text="Роль" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="HideEmpl" text="Занятость">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableEm" prefHeight="747.0" prefWidth="1020.0">
+                                       <columns>
+                                          <TableColumn fx:id="tabEmFio" prefWidth="97.0" text="ФИО актера" />
+                                          <TableColumn fx:id="tabEmPe" prefWidth="139.0" text="Представление" />
+                                          <TableColumn fx:id="tabEmGe" prefWidth="69.0" text="Роль" />
+                                          <TableColumn fx:id="tabEmCo" prefWidth="126.0" text="Контракт" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="HideShow" text="Показ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableSh" prefHeight="794.0" prefWidth="1020.0">
+                                       <columns>
+                                          <TableColumn fx:id="tabShId" prefWidth="30.0" text="№" />
+                                          <TableColumn fx:id="tabShTh" prefWidth="186.0" text="Театр" />
+                                          <TableColumn fx:id="tabShPe" prefWidth="139.0" text="Представление" />
+                                          <TableColumn fx:id="tabShTi" prefWidth="69.0" text="Время показа" />
+                                          <TableColumn fx:id="tabShFS" prefWidth="126.0" text="Свободно мест" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="HideTheatre" text="Театры">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableTh" prefHeight="794.0" prefWidth="1020.0">
+                                       <columns>
+                                          <TableColumn fx:id="tabThId" prefWidth="48.0" text="№" />
+                                          <TableColumn fx:id="tabThNa" prefWidth="168.0" text="Название" />
+                                          <TableColumn fx:id="tabThAd" prefWidth="161.0" text="Адрес" />
+                                          <TableColumn fx:id="tabThTe" prefWidth="83.0" text="Телефон" />
+                                          <TableColumn fx:id="tabThTy" prefWidth="120.0" text="Тип театра" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="HideCreators" text="Создатели">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tableCr" prefHeight="794.0" prefWidth="1020.0">
+                                       <columns>
+                                          <TableColumn fx:id="tabCrId" prefWidth="48.0" text="№" />
+                                          <TableColumn fx:id="tabCrNa" prefWidth="168.0" text="ФИО" />
+                                          <TableColumn fx:id="tabCrPo" prefWidth="161.0" text="Должность" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label fx:id="Logged" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="" textFill="BLACK" HBox.hgrow="ALWAYS">
+            <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+          <Label fx:id="Signal" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="" textFill="BLACK" HBox.hgrow="ALWAYS">
+              <font>
+                  <Font size="11.0" fx:id="x3" />
+              </font>
+              <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+              </textFill>
+          </Label>
+        <Pane prefHeight="32.0" prefWidth="876.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="enterButton" layoutX="897.0" layoutY="1.0" mnemonicParsing="false" text="Сохранить" />
+                  <Button fx:id="createButton" blendMode="SRC_ATOP" contentDisplay="RIGHT" layoutX="817.0" layoutY="1.0" mnemonicParsing="false" text="Создать" />
+                  <TextField fx:id="loginF" layoutX="14.0" layoutY="1.0" promptText="login" />
+                  <TextField fx:id="passF" layoutX="207.0" layoutY="1.0" promptText="password" />
+                  <Button fx:id="Enter" layoutX="402.0" layoutY="1.0" mnemonicParsing="false" text="Войти" />
+                  <Button fx:id="Register" layoutX="470.0" layoutY="1.0" mnemonicParsing="false" text="Регистрация" />
+                  <Button fx:id="Delete" layoutX="736.0" layoutY="1.0" mnemonicParsing="false" text="Удалить" />
+               </children></Pane>
+        <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@ComplexApplication.css" />
+  </stylesheets>
+</VBox>
