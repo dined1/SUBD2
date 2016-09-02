@@ -37,15 +37,7 @@ public class ActorCreateController {
 
     public void initializeF(Controller controller, Scene scene, Label signal) {
         Controller c = new Controller();
-        try {
-            String SQL = "SELECT LOGIN FROM USERS";
-            ResultSet rs = c.st.executeQuery(SQL);
-            while (rs.next()){
-                Users.add(rs.getString("LOGIN"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        
         messUs.setItems(Users);
         okButton.setOnAction(event -> {
             c.Act(messName.getText(),Integer.parseInt(messY.getText()),Integer.parseInt(messEx.getText()),Integer.parseInt(messCo.getText()),
